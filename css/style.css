@@ -13,6 +13,10 @@ body {
   box-shadow: 0px 0px 30px black;
   transition: 0.4s;
 }
+
+#intro figure {
+  margin-bottom: 25px;
+}
 figcaption {
   margin-top: 20px;
   margin-left: 58px;
@@ -25,12 +29,26 @@ figcaption {
 #intro .lead {
   margin-top: 40px;
   font-size: 30px;
+  margin-bottom: 50px;
 }
 #intro p,
 #intro h1 {
   font-size: 19px;
   margin-left: 10%;
 }
+a:hover,
+footer p:hover {
+  text-shadow: 0px 0px 1px black;
+}
+
+#intro a {
+  margin-left: 6px;
+}
+footer .container {
+  margin-top: 50px;
+  font-size: 20px;
+}
+
 @media only screen and (max-width: 767px) {
   #intro img {
     margin-left: 27%;
@@ -38,12 +56,4 @@ figcaption {
   figcaption {
     margin-left: 200px;
   }
-}
-footer .container {
-  margin-top: 50px;
-  font-size: 20px;
-}
-footer .container a:hover,
-footer p:hover {
-  text-shadow: 0px 0px 1px black;
 }
