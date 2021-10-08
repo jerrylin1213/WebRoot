@@ -35,7 +35,7 @@ header {
   left: 0;
 } */
 .background-image {
-  background-image: url(/img/bg-img.jpg);
+  background-image: url(../img/bg-img.jpg);
   background-position: center center;
   width: 100vw;
   background-repeat: no-repeat;
