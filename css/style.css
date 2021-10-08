@@ -43,7 +43,6 @@ header {
 
 .name {
   position: absolute;
-
   margin-top: 40vh;
   text-align: center;
   z-index: 1;
@@ -66,9 +65,25 @@ header {
   transition: 0.4s;
 }
 
-#intro figure {
-  margin-bottom: 25px;
+#intro .col-md-3 {
+  position: relative;
 }
+
+#intro .col-md-3 figure {
+  position: absolute;
+  top: 0;
+}
+
+#intro .col-md-3 p {
+  text-align: center;
+  margin-right: 1vw;
+}
+
+#intro .col-md-7 {
+  align-content: center;
+  margin-left: 5vw;
+}
+
 figcaption {
   margin-top: 20px;
   margin-left: 58px;
@@ -94,9 +109,6 @@ footer p:hover {
   text-shadow: 0px 0px 1px black;
 }
 
-#intro a {
-  margin-left: 6px;
-}
 footer .container {
   margin-top: 50px;
   font-size: 20px;
@@ -109,7 +121,26 @@ footer .container {
   figcaption {
     margin-left: 200px;
   }
-  /* .video {
-    display: none;
+  #intro .col-md-3 figure {
+    position: static;
+    top: 0;
+  }
+  #intro p {
+    font-size: 19px;
+    margin-left: -3vw;
+  }
+  #intro .col-md-7.lead {
+    text-align: center;
+    margin-left: 0;
+  }
+  #intro .col-md-7 {
+    /* margin: 0; */
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+}
+@media only screen and (max-width: 992px) {
+  /* #intro figure {
+    position: right center;
   } */
 }
