@@ -2,40 +2,20 @@ body {
   background-color: blanchedalmond;
   font-family: sans-serif;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 header {
   height: 100vh;
   display: flex;
 }
 
-/* .video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.video video {
-  position: absolute;
-  min-height: 100%;
-  min-width: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.video::after {
-  position: absolute;
-  content: "";
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-} */
-.background-image {
-  background-image: url(../img/bg-img.jpg);
+header .row {
+  /* background-image: url(../img/bg-img.jpg); */
+  background-color: rgba(128, 216, 238, 0.829);
   background-position: center center;
   width: 100vw;
   background-repeat: no-repeat;
@@ -44,13 +24,58 @@ header {
 .name {
   position: absolute;
   margin-top: 40vh;
+  margin-left: 25vw;
   text-align: center;
   z-index: 1;
+  width: 50vw;
 }
+
 .name h1 {
   font-size: 10vw;
-  color: rgba(247, 213, 65, 0.9);
-  text-shadow: 0px 0px 40px;
+  color: #000;
+}
+.name h1:hover {
+  text-shadow: 0px 0px 80px;
+  transition: 2s;
+}
+
+header .box {
+  position: absolute;
+  bottom: 4%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+header .box span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 1.5s infinite;
+}
+
+header .box span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+header .box span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-1rem, -1rem);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(1rem, 1rem);
+  }
 }
 
 #intro img {
@@ -60,6 +85,7 @@ header {
   object-fit: cover;
   margin-top: 50px;
 }
+
 #intro img:hover {
   box-shadow: 0px 0px 30px black;
   transition: 0.4s;
@@ -77,6 +103,7 @@ header {
 #intro .col-md-3 p {
   text-align: center;
   margin-right: 1vw;
+  text-decoration: none;
 }
 
 #intro .col-md-7 {
@@ -94,13 +121,14 @@ figcaption {
   padding: 80px 0px;
   /* height: 80vh; */
 }
+
 #intro .lead {
   margin-top: 40px;
   font-size: 30px;
   margin-bottom: 50px;
 }
 #intro p,
-#intro h1 {
+#intro h2 {
   font-size: 19px;
   margin-left: 10%;
 }
@@ -112,6 +140,20 @@ footer p:hover {
 footer .container {
   margin-top: 50px;
   font-size: 20px;
+  margin-bottom: 300px;
+}
+
+#buttons {
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.btn {
+  width: 12rem;
+  height: 3rem;
+  text-align: center;
+  font-size: 1.5rem;
 }
 
 @media only screen and (max-width: 767px) {
@@ -139,8 +181,91 @@ footer .container {
     padding-right: 5vw;
   }
 }
-@media only screen and (max-width: 992px) {
-  /* #intro figure {
-    position: right center;
-  } */
+
+/* template's CSS */
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+}
+.sources a {
+  text-decoration: none;
+}
+
+.sources {
+  width: 80vw;
+  margin-left: 8vw;
+}
+.sources .rating {
+  color: #5d5aee;
+  font-weight: 700;
+  text-shadow: 0 0 0.2em #fff;
+}
+.source {
+  /* text-align: center; */
+  font-size: 1.1em;
+  line-height: 2rem;
+  padding: 1rem;
+  position: relative;
+}
+.source img {
+  width: 10vw;
+}
+.source img:hover {
+  width: 60vw;
+  transition: 2s;
+  border-radius: 1rem;
+  box-shadow: 0 0 10rem yellow;
+}
+.source .hover {
+  position: absolute;
+  left: 3vh;
+  bottom: 3vh;
+}
+.source1 {
+  background-color: #6dd9bf;
+}
+.source2 {
+  background-color: #50a18e;
+}
+.source3 {
+  background-color: #f2d680;
+}
+.source3 .hover {
+  color: #fff;
+}
+.source4 {
+  background-color: #f2916d;
+}
+.source5 {
+  background-color: #f26e50;
+}
+.source5 .hover {
+  color: greenyellow;
+}
+.backToHome {
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.backToHome a {
+  border-radius: 1em;
+  padding: 1.5vh;
+  color: black;
+  text-decoration: none;
+  font-weight: 700;
+  background-color: rgba(128, 216, 238, 0.829);
+}
+
+@media only screen and (max-width: 1210px) {
+  .source .hover {
+    position: absolute;
+    left: 23vh;
+    bottom: 3vh;
+    color: black;
+  }
 }

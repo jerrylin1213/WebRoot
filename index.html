@@ -3,7 +3,6 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Optional and Good Form meta tags to use -->
     <meta name="keywords" content="Search terms" />
@@ -12,7 +11,11 @@
       content="This is the paragraph that appears along with your link in seatch engine results."
     />
     <meta name="author" content="Chia-Wei Lin" />
-
+    <script
+      src="https://kit.fontawesome.com/2cef02184c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/normalize.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -30,10 +33,15 @@
   <body>
     <header>
       <div class="row">
-        <div class="background-image"></div>
         <div class="name">
           <h1>Jerry Lin</h1>
         </div>
+      </div>
+
+      <div class="box">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </header>
 
@@ -44,12 +52,12 @@
             <figure>
               <img src="img/JerryLin.jpg" alt="Photo of Jerry" />
               <figcaption>Jerry Lin</figcaption>
-              <br />
-              <p><a href="html/template.html">Web Resources</a></p>
+
+              <p><a href="html/webresources.html">Web Resources</a></p>
             </figure>
           </div>
           <div class="col-md-7 text-left">
-            <h1 class="lead">Hello, I am Jerry Lin.</h1>
+            <h2 class="lead">Hello, I am Jerry Lin.</h2>
             <p>
               I am an internaitonal student from Taiwan. I was born and grown in
               Taiwan until the age of 18. I study information system and
@@ -66,18 +74,10 @@
     <footer>
       <hr />
       <div class="container">
-        <div class="row">
-          <div class="col-md-4 text-center">
-            <p>Email: <a href="mailto:">chiawei.lin@bellevuecollege.edu</a></p>
-          </div>
-          <div class="col-md-4 text-center">
-            <a href="https://github.com/jerrylin1213">Jerry's GitHub</a>
-          </div>
-          <div class="col-md-4 text-center">
-            <a href="https://www.linkedin.com/in/chia-wei-lin-22822821a"
-              >Jerry's LinkedIn</a
-            >
-          </div>
+        <div id="buttons">
+          <a href="#" class="btn"><i class="far fa-envelope"></i> Email</a>
+          <a href="#" class="btn"><i class="fab fa-github"></i> GitHub</a>
+          <a href="#" class="btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
         </div>
       </div>
     </footer>
