@@ -91,19 +91,26 @@ header .box span:nth-child(3) {
   transition: 0.4s;
 }
 
-#intro .col-md-3 {
+#intro .col-md-3 figure {
   position: relative;
 }
 
-#intro .col-md-3 figure {
-  position: absolute;
-  top: 0;
+#intro .col-md-3 img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* position: absolute; */
 }
 
+#intro .col-md-3 figcaption,
 #intro .col-md-3 p {
-  text-align: center;
-  margin-right: 1vw;
-  text-decoration: none;
+  /* position: absolute; */
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+#intro .col-md-3 figcaption {
+  margin-top: 5vh;
 }
 
 #intro .col-md-7 {
@@ -165,20 +172,30 @@ footer .container {
   }
   #intro .col-md-3 figure {
     position: static;
-    top: 0;
+    top: 0px;
   }
   #intro p {
     font-size: 19px;
     margin-left: -3vw;
   }
-  #intro .col-md-7.lead {
+  #intro .col-md-7 .lead {
     text-align: center;
     margin-left: 0;
+    padding-top: 5vh;
+    font-size: 1.3rem;
   }
   #intro .col-md-7 {
     /* margin: 0; */
     padding-left: 5vw;
     padding-right: 5vw;
+  }
+  #intro .col-md-7 p {
+    padding: 0 5vw;
+  }
+}
+@media only screen and (max-width: 456px) {
+  #buttons a i {
+    display: block;
   }
 }
 
